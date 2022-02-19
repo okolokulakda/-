@@ -1,0 +1,58 @@
+Задание 1 
+#include <iostream>
+using namespace std;
+bool accept(){
+    int chis1 = 0;
+    int chis2 = 0;
+    char sign;
+    cin >> chis1;
+    cin >> chis2;
+    cin >> sign;
+    switch(sign)
+    {
+        case '+':
+            cout << chis1 + chis2 << endl;
+            break;
+        case '-':
+            cout << chis1 - chis2 << endl;
+            break;
+        case '*':
+            cout << chis1 * chis2 << endl;
+            break;
+        case '/':
+            cout << chis1 / chis2 << endl;
+            break;
+        default:
+            cout << "not cool" << endl;
+            break;
+    }
+    return false;
+}
+int main() {
+    cout << "Enter 2 numbers and a symbol" << endl;
+    bool result = false;
+    accept();
+    return 0;
+}
+
+Задание 2
+
+#include <iostream>
+#include "windows.h"
+using namespace std;
+bool accept(){
+    int n;
+    cin >> n;
+    while(n > 0)
+    {
+        std::cout << n << endl;
+        Sleep(1000);
+        --n;
+    }
+    return 0;
+}
+int main() {
+    cout << "Enter the 'n'" << endl;
+    accept();
+    return 0;
+}
