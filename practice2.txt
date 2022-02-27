@@ -1,0 +1,55 @@
+1.
+#include <iostream> 
+using namespace std;
+int main() { 
+    cout << "Hello, World!\n" << endl; 
+    return 0; 
+}
+
+3.
+#include <iostream>
+using namespace std;
+int main() {
+    int a;
+    cin >> a;
+    int b;
+    b = 0;
+    int c;
+    c = 0;
+    int d;
+    d = 1;
+    while(a>0){
+        b = a % 10;
+        c += b*d;
+        d *= 2;
+        a = a / 10;
+    }
+    cout << c << endl;
+    return 0;
+}
+
+4.
+
+Задание 4(работает только до 1023)
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a;
+    cin >> a;
+    int b;
+    b = 0;
+    int c;
+    c = 0;
+    int d;
+    d = 1;
+    while(a>0){
+        b = a % 2;
+        c += b*m;
+        d *= 10;
+        a = a / 2;
+    }
+    cout << c << endl;
+    return 0;
+}
