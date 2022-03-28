@@ -1,12 +1,19 @@
-1.
-#include <iostream> 
+задание 1.
+#include <iostream>
+#include <string>
 using namespace std;
-int main() { 
-    cout << "Hello, World!\n" << endl; 
-    return 0; 
+int main()
+{
+    string text = "#include <iostream>\n"
+                  " \n"
+                  "int main() {\n"
+                  "std::cout << \"Hello, World!\\n\" << std::endl;\n"
+                  "return 0;\n"
+                  "}";
+    cout<<text; 
 }
 
-3.
+Задание 3.
 #include <iostream>
 using namespace std;
 int main() {
@@ -27,8 +34,6 @@ int main() {
     cout << c << endl;
     return 0;
 }
-
-4.
 
 Задание 4(работает только до 1023)
 
