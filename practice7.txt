@@ -1,0 +1,77 @@
+1.
+#include <windows.h>
+#include <fstream>
+using namespace std;
+
+int main(int argc, char* argv[]) {
+    SetConsoleOutputCP(CP_UTF8);
+    ofstream fout("test.txt");
+    fout << "ja hochu pitsi";
+    fout.close();
+    system("pause");
+    return 0;
+}
+
+2.
+#include <iostream>
+#include <windows.h>
+#include <string>
+#include <fstream>
+
+using namespace std;
+
+int main(){
+    SetConsoleOutputCP(CP_UTF8);
+    string a;
+    ifstream file("test.txt");
+
+    while(getline(file, a)){
+        cout << a << endl;
+    }
+
+    file.close();
+
+    return 0;
+}
+
+3.
+#include <iostream>
+#include <windows.h>
+#include <string>
+#include <fstream>
+
+using namespace std;
+
+int main(){
+    SetConsoleOutputCP(CP_UTF8);
+    string s;
+    ifstream file("test.txt");
+    int n = 255;
+    char* buffer = new char[n+1];
+    buffer[n]=0;
+    file.get(buffer,n);
+    cout << buffer;
+
+    file.close();
+
+    return 0;
+}
+5.
+
+#include <windows.h>
+#include <fstream>
+#include <iostream>
+using namespace std;
+
+int main(int argc, char* argv[]) {
+    SetConsoleOutputCP(CP_UTF8);
+    ofstream fout("test2.txt");
+    string a;
+    cin >> a;
+    fout << a;
+    fout.close();
+    system("pause");
+    return 0;
+}
+
+
