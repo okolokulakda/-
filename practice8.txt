@@ -1,0 +1,43 @@
+1.
+#include <cstdlib>
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    char str[] = "12312522.074564643eqeq";
+    char *end;
+    double number;
+
+    number = strtod(str, &end);
+    cout << "number = " << str << endl;
+    cout << "double = " << number << endl;
+    return 0;
+}
+
+2.
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main () {
+    vector<char> result;
+    vector<char>::iterator el;
+    string::iterator it;
+
+    string str;
+    cout << "Enter your word:\n";
+    cin >> str;
+
+    for (it = str.begin(); it!=str.end(); ++it)
+    {
+        result.push_back(*it);
+    }
+
+    for (el = result.begin(); el !=result.end(); ++el)
+    {
+        cout<<*el<<endl;
+    }
+    return 0;
+
+}
