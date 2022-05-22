@@ -1,0 +1,60 @@
+#1
+#include <iostream>
+#include <list>
+using namespace std;
+
+class Student{
+public:
+    string name;
+    string surname;
+    string lecturehall;
+
+    Student(string n, string s, string m){
+        name = n;
+        surname = s;
+        lecturehall = m;
+
+    };
+};
+class Teacher: public Student{
+public:
+    list<Student*> group;
+    short rank;
+    Teacher(string n1, string s1, string m1) : Student(n1, s1, m1) {
+        name = n1;
+        surname = s1;
+        lecturehall = m1;
+
+    };
+    Teacher& visit_card(){
+        cout << "Surname: " << surname << endl;
+        cout << "Name: " << name << endl;
+        cout << "Lecture hall: " << lecturehall << endl;
+        cout << "Rank: " << rank << endl;
+    }
+};
+int main(){
+    Teacher Ilya(  "Ilya", "Kolokolnikov","1");
+    Student Dan( "Daniil", "OkoloKulak", "2");
+    Student Egor( "Egor", "Ushanov", "3");
+
+    Ilya.group.push_back(&Dan);
+    Ilya.group.push_back(&Egor);
+    Student* adress = &Dan;
+    Student frt1 = *adress;
+    return 0;
+}
+#3
+#include <iostream>
+using namespace std;
+int main()
+{
+    const int n = 5;
+    int a[n] = {5, 6, 6, 7, 8};
+    for (int i = 0; i < n; i++)
+
+    {
+        cout << *(a+i) << endl;
+    }
+    return 0;
+}
